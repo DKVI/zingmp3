@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
-
+/** @format */
+import { useSelector, useDispatch } from "react-redux";
+import "./App.css";
+import { Route, Routes } from "react-router-dom";
+import { Home, Login, Public } from "./containers/public";
+import paths from "./ultis/paths";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Routes>
+        <Route path={paths.PUBLIC} element={<Public />}>
+          <Route path={paths.HOME} element={<Home />} />
+          <Route path={paths.LOGIN} element={<Login />} />
+          <Route path={paths.STAR} element={<Home />} />
+        </Route>
+      </Routes>
     </div>
   );
 }
