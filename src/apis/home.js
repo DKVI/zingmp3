@@ -2,15 +2,16 @@
 
 import axios from "../axios";
 
-export const getHome = () =>
-  new Promise(async (reslove, reject) => {
+export const getHome = () => {
+  return new Promise(async (resolve, reject) => {
     try {
       const response = await axios({
         url: "/home",
         method: "get",
       });
-      reslove(response);
+      resolve(response);
     } catch {
-      reject();
+      reject("404 NOT FOUND");
     }
   });
+};

@@ -4,7 +4,13 @@ import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import { Home, Login, Public } from "./containers/public";
 import paths from "./ultis/paths";
+import * as actions from "./store/actions";
+import { useEffect } from "react";
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(actions.getHome());
+  }, []);
   return (
     <div>
       <Routes>
