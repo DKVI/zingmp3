@@ -12,11 +12,6 @@ export const sideBarMenu = [
     icon: <HiOutlineChartPie size={24} fontWeight={300} />,
   },
   {
-    path: "Login",
-    text: "login",
-    icon: <HiOutlineChartPie size={24} />,
-  },
-  {
     path: "",
     text: "Khám phá",
     icon: <TbChartArcs size={24} fontWeight={300} />,

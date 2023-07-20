@@ -12,8 +12,8 @@ const activeStyle =
 
 const SlidebarLeft = () => {
   return (
-    <div className="bg-[#dde4e4]">
-      <div className="w-full h-[70px] py-[15px] px-[25px] flex">
+    <div className="bg-main-200 min-h-full">
+      <div className="w-full py-[15px] px-[25px] flex">
         <img src={logo} alt="logo" className="w-[120px] h-10" />
       </div>
       <div className="flex flex-col">

@@ -4,7 +4,8 @@ const paths = {
   PUBLIC: "/",
   HOME: "",
   LOGIN: "Login",
-  STAR: "/*",
+  STAR: "*",
+  MY_MUSIC: "/mymusic",
 };
 
 export default paths;
